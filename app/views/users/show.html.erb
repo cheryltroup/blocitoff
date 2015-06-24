@@ -1,9 +1,35 @@
+<div class="row">
 
-<h1>Users Information</h1>
+  <div class="col-md-8">
+      <h3><%= current_user.name %></h3>
+  </div>
+
+
+  <div class="col-md-8">
+    <h1>Item's To-Do</h1>
+    <% @items.each do |item| %>
+     <p><%= item.name %></p>
+    <% end %>
+  </div>
+
+
+</div>
+
+<div class="row">
+  <div calss="col-md-12">
+    <div class="new-items">
+      <%= render partial: 'items/form', locals: { user:@user, item: @item } %>
+    </div>
+  </div>
+</div>
+
+
+
+<h3>Users Information</h3>
 <div class="row">
   <div class="col-md-8">
-      <h3><%= @user.name || @user.email %></h3>
-    <p>  created <%= time_ago_in_words(@user.created_at) %> ago </p>
+      <h3><%= current_user.name || current_user.email %></h3>
+    <p>  created <%= time_ago_in_words(current_user.created_at) %> ago </p>
    </div>
 </div>
->
+    

@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
+  
+  devise_for :users
+   resources :users, only: [:show] do
+   resources :items
+  end
+
+  get 'items/show'
+
   get 'users/show'
 
-  devise_for :users
-   resources :users, only: [:show]
-
-  get 'home/index'
+  get 'items/create'
 
   get 'home/about'
 

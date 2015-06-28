@@ -5,7 +5,4 @@ class UsersController < ApplicationController
   	@item = Item.new
   end
 
-  def crap
-  	@items = current_user.items
-  end
 end

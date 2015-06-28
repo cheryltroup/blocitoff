@@ -1,16 +1,16 @@
 <div class="row">
 
   <div class="col-md-8">
-      <h3><%= current_user.name %></h3>
+
   </div>
 
 
-  <div class="col-md-8">
-    <h1>Item's To-Do</h1>
-    <% @items.each do |item| %>
-     <p><%= item.name %></p>
-    <% end %>
-  </div>
+  <<h3>Your To-Do List </h3>  
+    
+<table class="table table-bordered">
+  <%= render @items %>
+</table>
+
 
 
 </div>
@@ -25,10 +25,10 @@
 
 
 
-<h3>Users Information</h3>
+
 <div class="row">
   <div class="col-md-8">
-      <h3><%= current_user.name || current_user.email %></h3>
+      <p><%= current_user.name || current_user.email %></p>
     <p>  created <%= time_ago_in_words(current_user.created_at) %> ago </p>
    </div>
 </div>

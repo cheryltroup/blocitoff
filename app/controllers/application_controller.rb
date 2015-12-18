@@ -9,11 +9,11 @@ class ApplicationController < ActionController::Base
 		current_user
 	end
 
-   protected
+  protected
  
-   def configure_permitted_parameters
-     devise_parameter_sanitizer.for(:sign_up) << :name
-   end
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) << :name
+  end
 end
 
 

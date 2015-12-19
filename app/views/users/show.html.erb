@@ -23,6 +23,8 @@
   <div class="col-md-8">
       <p><%= current_user.name || current_user.email %></p>
     <p>  created <%= time_ago_in_words(current_user.created_at) %> ago </p>
+    <p>  last time signed in <%= (current_user.last_sign_in_at) %></p>
+
    </div>
 </div>
     

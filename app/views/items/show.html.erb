@@ -1,11 +1,7 @@
 
   <h3>Your item has been added to your list!!</h3>
   <br>
-<div class="media-body">
-  <div class="col-md-4 ">
-    <p><%= @item.name %></p>
-  </div>
-  </div>
-
-
+<table class="table table-bordered">
+    <%= render @item %>
+  </table>
 
